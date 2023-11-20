@@ -37,11 +37,8 @@ jobs:
     - name: Test with pytest
       run: |
         pytest test_module.py
-
-
     - name: Building docker image
       run: docker build -t probability_calculator .
-
     - name: Running docker image
       run: docker run probability_calculator
       
