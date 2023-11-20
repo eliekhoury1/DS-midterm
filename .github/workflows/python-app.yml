@@ -53,7 +53,6 @@ jobs:
     - name: Debugging - Show Docker Info
       run: docker info
     - name: Push Docker Image to Docker Hub
-      run: docker push eliekhoury1/prob_calculator
-
+      run: docker push eliekhoury1/ds_midterm/prob_calculator
 
         
