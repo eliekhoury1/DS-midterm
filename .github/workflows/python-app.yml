@@ -27,4 +27,4 @@ jobs:
       run: docker info
 
     - name: Pull Docker Image from Docker Hub
-      run: docker pull eliekhoury1/prob_calculator:${{ github.sha }}
+      run: docker pull eliekhoury1/prob_calculator:latest
