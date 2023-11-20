@@ -27,4 +27,4 @@ jobs:
       run: docker info
 
     - name: Pull Docker Image from Docker Hub
-      run: docker pull eliekhoury1/prob_calculator
+      run: docker pull eliekhoury1/prob_calculator:594863361c25d859ac193c2b4906babacb03f235
