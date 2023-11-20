@@ -43,8 +43,9 @@ jobs:
     - name: Building docker image
       run: docker build -t prob_calculator .
     - name: Running docker image script
-      run: docker run prob_calculator
-      
+      run: |
+       docker run prob_calculator || EXIT_CODE=$? && echo "Docker run failed with exit code $EXIT_CODE" && exit $EXIT_CODE
+
     
 
 
