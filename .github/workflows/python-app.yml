@@ -46,7 +46,9 @@ jobs:
       run: |
        docker run prob_calculator
 
-    
+    - name: Login to Docker Hub
+      run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
-
+    - name: Push Docker Image to Docker Hub
+      run: docker push eliekhoury1/ds_midterm:Dockerfile
         
