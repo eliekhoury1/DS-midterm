@@ -39,20 +39,6 @@ jobs:
         pytest test_module.py
         
 
-    - name: Building docker image
-      run: docker build -t eliekhoury1/prob_calculator:${{ github.sha }} .
-    
-    - name: Running docker image script
-      run: |
-        docker run eliekhoury1/prob_calculator:${{ github.sha }}
-    
-    - name: Login to Docker Hub
-      run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-    
-    - name: Debugging - Show Docker Info
-      run: docker info
-    
-    - name: Push Docker Image to Docker Hub
-      run: docker push eliekhoury1/prob_calculator:${{ github.sha }}
-
+    - name: Pull Docker Image from Docker Hub
+      run: docker pull eliekhoury1/prob_calculator:${{ github.sha }}
         
