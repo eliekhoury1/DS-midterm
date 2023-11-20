@@ -42,8 +42,8 @@ jobs:
 
     - name: Building docker image
       run: docker build -t prob_calculator .
-    - name: Running docker image
-      run: docker run prob_calculator 
+    - name: Running docker image script
+      run: docker run prob_calculator:1.0.1
       
     
 
