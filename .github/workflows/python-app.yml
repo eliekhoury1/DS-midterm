@@ -46,8 +46,9 @@ jobs:
       run: |
        docker run prob_calculator
 
+
     - name: Login to Docker Hub
-      run: docker login -u ${{ secrets.eliekhoury1 }} -p ${{ secrets.dckr_pat_ogR4395Mgr5mt6t49KpQLRWilSo }}
+      run: docker login -u ${{ github.actor }} -p ${{ secrets.dckr_pat_ogR4395Mgr5mt6t49KpQLRWilSo }}
 
     - name: Push Docker Image to Docker Hub
       run: docker push eliekhoury1/ds_midterm:Dockerfile
